@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="abhi">
+
+    </div> -->
+</body>
+<script>
+    const obj=["Nikhil","Abhishek","Saurabh"]
+    // const abhi = document.querySelector('.abhi')
+    
+    const abhi = document.createElement('div')
+    console.log(abhi);
+    abhi.className = "main"
+    
+    obj.forEach( item => {
+        const div = document.createElement('div')
+        div.textContent = item
+        abhi.appendChild(div)
+    });
+    
+
+    document.body.appendChild(abhi)
+</script>
+</html>
