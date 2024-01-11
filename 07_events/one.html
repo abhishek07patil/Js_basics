@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="400px" id="photoshop" src="https://www.pexels.com/photo/people-on-the-beach-in-drone-photography-13830062/" alt=""></li>
+            <li><img width="400px" id="photoshops" src="https://www.pexels.com/photo/vasco-da-gama-bridge-at-sunset-18840507/" alt=""></li>
+            <li><img width="400px" id="photoshopr" src="https://www.pexels.com/photo/expo-15603922/" alt=""></li>
+            <li><img width="400px" id="photoshopa" src="https://www.pexels.com/photo/hands-holding-a-camera-against-a-white-curtain-19710600/" alt=""></li>
+            <li><img width="400px" id="sky" src="https://images.pexels.com/photos/18840507/pexels-photo-18840507/free-photo-of-vasco-da-gama-bridge-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li> <a style="color: aliceblue;" href="https://google.com" id="google">Google</a> </li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("sky").onclick = function(){
+    //     alert("sky clicked")
+    // }
+
+    //******************Events****************
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlKey, shiftedKey, keyCode
+
+    document.getElementById('sky').addEventListener('click', function(e){
+        // alert('click on sky')
+        console.log(e);
+    }, false)
+
+
+    
+</script>
+</html>
