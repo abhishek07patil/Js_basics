@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const date = function(src){
+        console.log(src, Date.now());
+    };
+
+    // Function to start the interval
+    function startInterval() {
+        return setInterval(date, 1000, "ABHI");
+    }
+
+    let intervalId = startInterval(); // Start the interval and store the interval ID
+
+    document.querySelector('#start').addEventListener('click', function(e){
+        // Clear existing interval and start a new one
+        clearInterval(intervalId); 
+        intervalId = startInterval();
+        console.log("start");
+    });
+
+    document.querySelector('#stop').addEventListener('click', function(e){
+        clearInterval(intervalId);
+        console.log("stop");
+    });
+</script>
+</html>
+
+
